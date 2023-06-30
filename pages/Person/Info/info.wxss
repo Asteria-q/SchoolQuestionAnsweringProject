@@ -1,0 +1,89 @@
+/* pages/PersonalInfo/Info/info.wxss */
+.page {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+.Avatar{
+    display: flex;
+    width: 100%;
+    height: 280rpx;
+    background-image: linear-gradient(25deg, #e02e2e, #c55368, #9a6ba3, #2e7fe0);
+}
+
+.gender{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.change_image{
+    position: relative;
+    left: 100px;
+    bottom: 60px;
+    font-size:x-large;
+    color:gray;
+}
+.info{
+    font-weight :600;
+    font-size: large;
+    text-indent: 10px;
+    margin-top: 15px;
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: small;
+}
+.intro_num{
+    font-size: x-small;
+    position: relative;
+    left: 85px;
+    bottom: 20px;
+    color: gray;
+}
+.intro{
+    word-break: break-all;
+}
+.Tags{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+.Tag{
+    font-size: medium;
+    margin-top: 20rpx;
+    width: 120px;
+    height: 30px;
+}
+.finish{
+    margin-top: 70rpx;
+    width: 30%;
+    height: 50px;
+    margin-left: 35%;
+    margin-bottom: 60rpx;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+}
+.view-contain-nei {
+    display: flex;
+    height: 100px;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+   /* margin: 20px;*/
+    border: 3rpx solid #3a20ce;
+    border-radius: 30rpx;
+  }
+  .input2 {
+    margin:  auto 10px;
+    font-size: 15px;
+    top:5px;
+    width: 500px;
+  }

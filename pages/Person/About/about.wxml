@@ -1,0 +1,9 @@
+<!--pages/Person/About/about.wxml-->
+<view class="info">
+    <text>我们是北京学院20级学生</text>
+    <text>设计人员：李鹏飞、王章琦、刘童杰、齐梓一、辛泽旭、韩昶旭、高保隆</text>
+    <text>我们的的口号是：北航nb</text>
+    <text>在李鹏飞组长英明的带领下</text>
+    <text>我们组克服了种种困难，最终完成了此次任务</text>
+</view>
+

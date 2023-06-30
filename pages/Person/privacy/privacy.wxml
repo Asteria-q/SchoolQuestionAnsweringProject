@@ -1,0 +1,20 @@
+<!-- pages/Person/privacy/privacy.wxml -->
+<view class="page__bd">
+    <view class="Switch">
+        <view class="title">性别</view>
+        <van-switch checked="{{sex}}" bind:change="ChangeSex" color="#1989fa" />
+    </view>
+    <view class="Switch">
+        <view class="title">专业</view>
+        <van-switch checked="{{profession}}" bind:change="ChangeProfession" color="#1989fa" />
+    </view>
+    <view class="Switch">
+        <view class="title">年级</view>
+        <van-switch checked="{{grade}}" bind:change="ChangeGrade" color="#1989fa" />
+    </view>
+    <view class="Switch">
+        <view class="title">兴趣</view>
+        <van-switch checked="{{Tags}}" bind:change="ChangeTags" color="#1989fa" />
+    </view>
+    <button class="finish" bindtap="finish">完成</button>
+</view>

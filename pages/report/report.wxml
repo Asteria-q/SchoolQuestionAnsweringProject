@@ -1,0 +1,20 @@
+<!-- wxml代码 -->
+<view class="container">
+    <view class="form-group">
+        <text class="label">举报的原因：</text>
+        <textarea class="input" placeholder="请输入举报的原因" value="{{reason}}" bindinput="input"></textarea>
+    </view>
+    <view class="form-group">
+        <text class="label">被举报的ID：</text>
+        <input class="input" value="{{id}}" disabled></input>
+    </view>
+    <view class="form-group">
+        <text class="label">举报者名称：</text>
+        <input class="input" disabled value="{{userInfo.UserName}}"></input>
+    </view>
+    <view class="form-group">
+        <text class="label">举报时间：</text>
+        <text class="input">{{reportTime}}</text>
+    </view>
+    <button class="submit-btn" bindtap="submitReport">提交</button>
+</view>

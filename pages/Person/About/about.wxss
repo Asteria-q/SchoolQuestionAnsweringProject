@@ -1,0 +1,2 @@
+/* pages/Person/About/about.wxss */
+@import "/pages/Person/contact/contact.wxss"

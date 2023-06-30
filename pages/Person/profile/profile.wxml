@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="header">
+    <image class="avatar" src="{{info.Image}}" />
+    <view class="info">
+      <text class="username">{{info.UserName}}</text>
+      <text class="intro">{{info.SelfIntro}}</text>
+    </view>
+  </view>
+  <view class="body">
+    <!-- <block wx:if="{{'Sex' in info}}"> -->
+    <view class="field">
+      <text class="label">性别:</text>
+      <text class="value">{{info.Sex == 0? "女" : "男"}}</text>
+    </view>
+    <!-- </block> -->
+    <!-- <block wx:if="{{'Grade' in info}}"> -->
+    <view class="field">
+      <text class="label">年级:</text>
+      <text class="value">{{info.Grade}}</text>
+    </view>
+    <!-- </block> -->
+    <!-- <block wx:if="{{'Profession' in info}}"> -->
+    <view class="field">
+      <text class="label">专业:</text>
+      <text class="value">{{info.Profession}}</text>
+    </view>
+    <!-- </block> -->
+    <!-- <block wx:if="{{'Tags' in info}}"> -->
+    <view class="field">
+      <text class="label">兴趣:</text>
+      <view class="tags">
+        <view class="tag" wx:for="{{info.Tags}}" wx:key="index">{{item}}</view>
+      </view>
+    </view>
+    <!-- </block> -->
+  </view>
+</view>

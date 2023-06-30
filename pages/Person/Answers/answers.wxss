@@ -1,0 +1,69 @@
+page {
+  background-color: #E6F1FF;
+}
+
+.page {
+  height: auto;
+  font-size: medium;
+  color: black;
+  padding-top: 1px;
+  padding-bottom: 3px;
+}
+
+/* 在wxss文件中 */
+.answer-container {
+  padding: 10px;
+}
+
+.answer-info {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.time {
+  color: gray;
+}
+
+.question-container {
+  margin-bottom: 10px;
+}
+
+.question-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.question-content {
+  font-size: 14px;
+  background-color: #F5F5F5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.answer-container {
+  margin-bottom: 10px;
+}
+
+.answer-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.answer-content {
+  font-size: 14px;
+  background-color: #F0F8FF;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dashed-line {
+  height: 1px;
+  background: linear-gradient(to right, #EAEAEA 50%, transparent 50%);
+  background-size: 4px 1px;
+}
+
+@import "/template/qTemplate.wxss";
+@import "/template/hot.wxss";

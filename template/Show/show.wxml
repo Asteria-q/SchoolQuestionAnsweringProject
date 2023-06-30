@@ -1,0 +1,14 @@
+<!-- 在wxml文件中 -->
+<view class="answer-container">
+  <view class="answer-info">
+    <view class="time">{{answer.time}}</view>
+  </view>
+  <view class="question-container">
+    <view class="question-title">问题：</view>
+    <view class="question-content">{{question.content}}</view>
+  </view>
+  <view class="answer-container">
+    <view class="answer-title">回答：</view>
+    <view class="answer-content">{{answer.content}}</view>
+  </view>
+</view>

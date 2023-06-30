@@ -1,0 +1,12 @@
+<!-- HTML代码 -->
+<view class="container">
+    <form style="width: 300px;">
+        <view class="form-group">
+            <input class="input-title" disabled="{{true}}" value="{{question.Title}}" />
+        </view>
+        <view class="form-group">
+            <textarea class="input-content" value="{{content}}" placeholder="请输入回答内容" maxlength="200" bindinput="onInput"></textarea>
+        </view>
+        <button class="submit-button" bind:tap="finish">发布</button>
+    </form>
+</view>

@@ -1,0 +1,12 @@
+<import src="/template/qTemplate.wxml"></import>
+<import src="/template/hot.wxml"></import>
+<view class="page">
+    <block wx:if="{{questionList.empty()}}">
+        <van-empty image="search" description="还没有发布问题"></van-empty>
+    </block>
+    <block wx:else>
+        <block wx:for="{{questionList}}" wx:key="index">
+            <template is="question-show" data="{{question: item, index: index, liked: liked}}"></template>
+        </block>
+    </block>
+</view>

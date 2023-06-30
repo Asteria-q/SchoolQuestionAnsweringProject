@@ -1,0 +1,17 @@
+{
+    "enablePullDownRefresh":true,
+    "onReachBottomDistance": 30,
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark",
+    "usingComponents": {
+        "van-search": "@vant/weapp/search/index",
+        "van-sticky": "@vant/weapp/sticky/index",
+        "van-overlay": "@vant/weapp/overlay/index",
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+        "van-tag": "@vant/weapp/tag/index",
+        "van-row": "@vant/weapp/row/index",
+        "van-col": "@vant/weapp/col/index",
+        "van-empty": "@vant/weapp/empty/index"
+      }      
+}

@@ -1,0 +1,27 @@
+/* pages/Person/privacy/privacy.wxss */
+
+.title{
+    display: flex;
+    font-size: large;
+    justify-content: center;
+    margin-left: 30px;
+    /* font-weight: bolder; */
+}
+.Switch{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-right: 30px;
+}
+
+.finish{
+    margin-top: 150px;
+    width: 30%;
+    height: 50px;
+    margin-left: 35%;
+    margin-bottom: 60rpx;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+}

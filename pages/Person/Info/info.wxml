@@ -1,0 +1,43 @@
+<!-- pages/PersonalInfo/Info/info.wxml -->
+<scroll-view class="page" enable-flex="true">
+    <view class="Avatar" bindtap="headimage">
+        <van-image src="{{head}}" width="100" height="100" round style="padding-left: 35%; padding-top: 7%;"></van-image>
+    </view>
+    <view class="info">基本资料</view>
+    <view class="information">
+        <van-cell-group>
+            <van-field label="昵称" model:value="{{nikeName}}" maxlength='10' placeholder="请输入昵称（10字以内）" bind:change='change_name' />
+            <view class="gender">
+                <van-field label="性别" style="width: 100px;" />
+                <van-radio-group value="{{ gender }}" style="margin-top: 12px;margin-left: 10px;" bind:change="Change_gender" direction="horizontal">
+                    <van-radio name="1">男</van-radio>
+                    <van-radio name="0">女</van-radio>
+                </van-radio-group>
+            </view>
+            <!-- <van-field class="intro" label="简介" model:value="{{introduction}}" placeholder="个人介绍（40字以内）" bind:change="change_intro" maxlength='40' bind:blur="blur" auto-focus="true"/> -->
+            <van-field label="专业" value="{{major}}" bind:change="Change_major" placeholder="请输入专业" />
+            <van-cell-group>
+                <van-field readonly is-link value="{{ grade }}" catchtap="showPopup" center clearable placeholder="" label="年级"></van-field>
+            </van-cell-group>
+            <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+                <van-picker loading="{{false}}" show-toolbar title="年级" columns="{{ grade_list }}" bind:cancel="onCancel" bind:confirm="onConfirm" />
+            </van-popup>
+        </van-cell-group>
+    </view>
+    <text class="info">个性签名</text>
+    <view class="intro_num">（{{cur_word_num}}/40）</view>
+    <view class="view-contain-nei">
+        <textarea class="input2" placeholder="请编辑您的个性签名，40字以内" maxlength="40" model:value="{{introduction}}" bindinput="change_intro" />
+    </view>
+    <text class="info">兴趣</text>
+    <view class="Tags">
+        <van-checkbox-group value="{{ tags }}" bind:change="Change_Tag" direction="horizontal" max="{{5}}">
+            <block wx:for="{{TAGS}}" wx:key="index">
+                <view class="Tag">
+                    <van-checkbox name="{{item}}">{{item}}</van-checkbox>
+                </view>
+            </block>
+        </van-checkbox-group>
+    </view>
+    <button class="finish" bindtap="finish">完成</button>
+</scroll-view>

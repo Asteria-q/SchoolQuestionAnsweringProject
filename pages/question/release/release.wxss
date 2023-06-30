@@ -1,0 +1,154 @@
+/* pages/question/release/release.wxss */
+page{
+    background-image: linear-gradient(0deg, #fdfcfb 0%, #d9f3f5 100%);
+    /* background: linear-gradient(to bottom, #84d2f6, #76b1f2, #5f90f0, #3b63e3, #233fdd); */
+    /* background: linear-gradient(to bottom, #283c86, #45a247); */
+}
+.TIT{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bolder;
+    font-size: medium;
+}
+.view-contain-ti {
+    display: flex;
+    height: 40px;
+    margin: 20px;
+    border: 3rpx solid #3a20ce;
+    border-radius: 10rpx;
+  }
+  
+  .text-ti {
+    position: absolute;
+    font-size: 14px;
+    background: #d9f3f5;
+    margin: -10px 0 0 10px;
+    padding: 0 5px;
+    color: rgb(6, 16, 78);
+  }
+  
+  .input1 {
+    margin:  auto 10px;
+    font-size: 15px;
+  }
+  
+
+  .view-contain-nei {
+    display: flex;
+    height: 165px;
+    margin: 20px;
+    border: 3rpx solid #3a20ce;
+    border-radius: 10rpx;
+  }
+  
+  .text-nei {
+    position: absolute;
+    font-size: 14px;
+    background: #dbf3f5;
+    margin: -10px 0 0 10px;
+    padding: 0 5px;
+    color: rgb(6, 16, 78);
+  }
+  .input2 {
+    margin:  auto 10px;
+    font-size: 15px;
+    top:0px;
+  }
+
+.Tags{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+.Tag{
+    font-size: small;
+    margin-top: 0rpx;
+    width: 100px;
+    height: 25px;
+}
+
+
+.imageList {
+    margin-left: 5px;
+    padding: 32rpx;
+    width: 100vw;
+    box-sizing: border-box;
+   
+    /* 弹性布局 */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* 换行 */
+    flex-wrap: wrap;
+   
+    /* 内容区的实际宽度为
+     width: calc(100vw - 64rpx); 
+     width: 686rpx; 
+      */
+   
+  }
+   
+  /* 照片容器的样式 */
+  .imageList .imageItem {
+    margin-bottom: 25rpx;
+    width: 212rpx;
+    height: 212rpx;
+    /* background: #F7F9FD; */
+    border-radius: 8rpx;
+    border: 5rpx dotted #969696;
+    position: relative;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+  }
+   
+  .imageList .imageItem:nth-child(3n-1) {
+    margin: 0 25rpx;
+  }
+   
+  /* 图片的样式 */
+  .imageList .imageItem .image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+   
+  /* 删除按钮的样式 */
+  .imageList .imageItem .delImage {
+    width: 32rpx;
+    height: 32rpx;
+    border-radius: 50%;
+    background-color: #e40606;
+     color: #ffffff;
+    font-size: 32rpx;
+    text-align: center;
+    line-height: 22rpx;
+    position: absolute;
+    top: -16rpx;
+    right: -16rpx;
+   
+    box-sizing: border-box;
+  }
+   
+  /* 可以使用背景图 */
+  .imageList .addImage::before {
+    display: block;
+    content: "+";
+    width: 100rpx;
+    height: 100rpx;
+    color: #cccccc;
+    /* font-weight: 700; */
+    font-size: 70rpx;
+    text-align: center;
+    line-height: 100rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.fabu-button{
+    top: 0px;
+    width: 280px;
+}

@@ -1,0 +1,36 @@
+<template name="question-show">
+  <view class="container">
+    <view class="header">
+      <!-- <text>{{question.UID}}</text> -->
+      <view class="avatar">
+        <image src="{{question.Image}}" mode="aspectFill" bindtap="clickAvatar" data-uid="{{question.UID}}"></image>
+      </view>
+      <view class="info">
+        <view class="username">{{question.UserName}}</view>
+        <view class="time">{{question.QueTime}}</view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="title" bindtap="clickQue" data-index="{{index}}">{{question.Title}}</view>
+      <view class="text" bindtap="clickQue" data-index="{{index}}">{{question.QueContent}}</view>
+      <view class="q-info">
+        <view class="tags">
+          <view class="tag" wx:for="{{question.Tags}}" wx:key="index">{{item}}</view>
+        </view>
+        <view class="love">
+          <block wx:if="{{liked[index]}}">
+            <view class="material-icons" style="color: #FF0000; font-size: 25px;">favorite</view>
+          </block>
+          <block wx:else>
+            <view class="material-icons" style="font-size: 25px;">favorite_border</view>
+          </block>
+          <view class="number">{{question.LikeNum}}</view>
+        </view>
+        <view class="comment">
+          <van-icon name="chat-o" size="25px" />
+          <view class="number">{{question.AnswersNum}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,53 @@
+{
+    "pages": [
+        
+        "pages/SearchAndBrowse/home/home",
+        "pages/question/show/show",
+        "template/Show/show",
+        "pages/Person/profile/profile",
+        "pages/Person/Info/info",
+        "pages/Person/home/home",
+        "pages/question/release/release",
+        "pages/answer/release/release",
+        "pages/Person/About/about",
+        "pages/Person/Problems/problems",
+        "pages/Person/Answers/answers",
+        "pages/Person/contact/contact",
+        "pages/Person/privacy/privacy",
+        "pages/SearchAndBrowse/search/search",
+        "pages/logs/logs",
+        "pages/report/report"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "QuestionAndAnswer",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "custom": true,
+        "backgroundColor": "#000000",
+        "list": [
+            {
+                "pagePath": "pages/SearchAndBrowse/home/home",
+                "text": "浏览"
+            },
+            {
+                "pagePath": "pages/question/release/release",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/Person/home/home",
+                "text": "我的"
+            }
+        ]
+    },
+    "usingComponents": {
+        "van-tabbar": "@vant/weapp/tabbar/index",
+        "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+        "van-button": "@vant/weapp/button/index",
+        "van-switch": "@vant/weapp/switch/index",
+        "van-icon": "@vant/weapp/icon/index"
+    },
+    "sitemapLocation": "sitemap.json"
+}

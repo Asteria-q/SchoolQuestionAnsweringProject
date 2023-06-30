@@ -1,0 +1,83 @@
+<scroll-view scroll-y scroll-top="{{scrollTop}}">
+    <view class="container">
+        <view class="QueHeader">
+            <text class="QueTitle">{{question.Title}}</text>
+        </view>
+        <view class="QueUser">
+            <image class="QueImage" src="{{question.Image}}" mode="scaleToFill" bind:tap="clickAvatar" data-uid="{{question.UID}}" />
+            <text class="QueUserName">{{question.UserName}}</text>
+            <text class="QueTime">{{question.QueTime}}</text>
+        </view>
+        <view class="QueContent">
+            <text class="text">{{question.QueContent}}</text>
+        </view>
+        <view class="QueInfo">
+            <view class="tags">
+                <view class="tag" wx:for="{{question.Tags}}" wx:key="index">{{item}}</view>
+            </view>
+            <view class="q-info">
+                <view class="love">
+                    <block wx:if="{{qlike}}">
+                        <view class="material-icons" style="color: #FF0000; font-size: 25px;" bind:tap="like" data-type="{{0}}" data-action="{{0}}" data-id="{{question.QID}}">
+                            favorite
+                        </view>
+                    </block>
+                    <block wx:else>
+                        <view class="material-icons" style="font-size: 25px;" bind:tap="like" data-type="{{0}}" data-action="{{1}}" data-id="{{question.QID}}">
+                            favorite_border
+                        </view>
+                    </block>
+                    <view class="number">{{question.LikeNum}}</view>
+                </view>
+                <view class="comment">
+                    <van-icon name="chat-o" size="25px" />
+                    <view class="number">{{question.AnswersNum}}</view>
+                </view>
+                <view class="report" bind:tap="report" data-type="{{0}}" data-id="{{question.QID}}">
+                    <view class="material-icons" style="font-size: 25px;">warning</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="answers">
+        <block wx:if="{{answers.length == 0}}">
+            <van-empty image="error"  description="空空如也"></van-empty>
+        </block>
+        <block wx:else>
+            <block wx:for="{{answers}}" wx:key="index">
+                <view class="answer">
+                    <view class="answer-header">
+                        <image class="answer-avatar" src="{{item.Image}}" bind:tap="clickAvatar" data-uid="{{item.UID}}" />
+                        <view class="answer-username">{{item.UserName}}</view>
+                        <view class="answer-time">{{item.AnsTime}}</view>
+                    </view>
+                    <view class="answer-content">{{item.AnsContent}}</view>
+                    <view class="ans-info">
+                        <view class="report" bind:tap="report" data-type="{{1}}" data-id="{{answers[index].AID}}">
+                            <view class="material-icons" style="font-size: 25px;">warning</view>
+                        </view>
+                        <view class="love">
+                            <block wx:if="{{likedAns[index]}}">
+                                <view class="material-icons" style="color: #FF0000; font-size: 20px;" bind:tap="like" data-type="{{1}}" data-action="{{0}}" data-id="{{item.AID}}">
+                                    favorite
+                                </view>
+                            </block>
+                            <block wx:else>
+                                <view class="material-icons" style="font-size: 20px;" bind:tap="like" data-type="{{1}}" data-action="{{1}}" data-id="{{item.AID}}">
+                                    favorite_border
+                                </view>
+                            </block>
+                            <view class="number">{{item.LikeNum}}</view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </block>
+    </view>
+</scroll-view>
+<view class="up" bind:tap="up" wx:if="{{showScrollTop}}">
+    <van-icon name="back-top" size="40px" />
+</view>
+<view class="add" bind:tap="add">
+    <view class="material-icons" style="font-size: 40px; color: #4CAF50">add</view>
+</view>

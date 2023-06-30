@@ -1,0 +1,50 @@
+<!-- 背景图片区域 -->
+<view class="bgcImage">
+  <!-- 用户信息区域 -->
+  <view class="userInfo">
+    <view class="AvatarAndInfo">
+      <!-- 头像 -->
+      <image class="Image" src='{{userInfo.Image}}' mode="aspectFill" />
+      <!-- 个人信息 -->
+      <view class="userInfoTxt">
+        <!-- 姓名 -->
+        <view class="userName">
+          <!-- 性别 -->
+          <text style="font-size: x-large;">{{userInfo.UserName}}</text>
+          <block wx:if="{{userInfo.Sex == '1'}}">
+            <image class="Sex" src="/images/male.png" mode="scaleToFill" />
+          </block>
+          <block wx:else>
+            <image class="Sex" src="/images/female.png" mode="scaleToFill" />
+          </block>
+        </view>
+        <view class="GradeAndPro">
+          <view class="Grade">{{userInfo.Grade}}</view>
+          <view class="Profession">{{userInfo.Profession}}</view>
+        </view>
+      </view>
+      <van-icon name="arrow" bind:click="changeInfo" class="iconArrow"></van-icon>
+    </view>
+    <!-- 个人介绍 -->
+    <view class="SelfIntro">
+      <text>{{userInfo.SelfIntro}}</text>
+    </view>
+    <view class="tags">
+      <block wx:for="{{userInfo.Tags}}" wx:key="index">
+        <view class="tag">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <!-- 第二个班级/专业Dialog -->
+  <view class="userInfoDialog">
+    <van-cell title="我的提问" is-link bind:click="myProblems" />
+    <van-cell title="我的回答" is-link bind:click="myAnswers" />
+  </view>
+</view>
+<!-- 第二个Dialog -->
+<view class="more">
+  <van-cell title="隐私设置" is-link bind:click="myPrivacy"></van-cell>
+  <van-cell title="反馈" is-link bind:click="feedback"></van-cell>
+  <van-cell title="关于我们" is-link bind:click="aboutUs"></van-cell>
+  <van-cell title="注销账号" is-link bind:click="logOff"></van-cell>
+</view>

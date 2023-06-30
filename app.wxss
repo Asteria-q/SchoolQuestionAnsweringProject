@@ -1,0 +1,5 @@
+/**app.wxss**/
+@import '/utils/MD_Wxss/index.wxss';
+page{
+    font-family: sans-serif;
+}

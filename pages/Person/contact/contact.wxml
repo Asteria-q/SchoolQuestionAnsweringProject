@@ -1,0 +1,6 @@
+<!-- pages/Person/contact/contact.wxml -->
+<view class="info">
+  <van-rate value="{{ value }}" allow-half void-icon="star" void-color="#eee" bind:change="onChange" />
+  <text>设计人员：李鹏飞、王章琦、刘童杰、齐梓一、辛泽旭、韩昶旭、高保隆</text>
+  <text>联系我们:**********</text>
+</view>

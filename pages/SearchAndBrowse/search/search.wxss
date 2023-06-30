@@ -1,0 +1,2 @@
+@import "/pages/SearchAndBrowse/home/home.wxss";
+@import "/template/qTemplate.wxss";

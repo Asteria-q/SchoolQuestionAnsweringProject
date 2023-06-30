@@ -1,0 +1,26 @@
+<!-- pages/question/release/release.wxml -->
+<view class="view-contain-ti">
+    <text class="text-ti">内容</text>
+    <input class="input1" placeholder="请用一句话简述您的问题" bindinput="inputTitle" value="{{title}}" confirm-type="done" maxlength="15" />
+</view>
+<view class="view-contain-nei">
+    <text class="text-nei">详细说明</text>
+    <textarea class="input2" placeholder="请详细说明您的问题" maxlength="100" value="{{content}}" confirm-type="done" bindinput="inputContent" />
+</view>
+<view class="Tags">
+    <van-checkbox-group value="{{ tags }}" bind:change="ChangeTag" direction="horizontal" max="{{3}}">
+        <block wx:for="{{TAGS}}" wx:key="index">
+            <view class="Tag">
+                <van-checkbox name="{{item}}">{{item}}</van-checkbox>
+            </view>
+        </block>
+    </van-checkbox-group>
+</view>
+<view class="imageList">
+    <view class="imageItem" wx:for="{{imageList}}" wx:key="index">
+        <image class="image" mode="aspectFill" bindtap="chooseImage" data-type="pictures" data-index="{{index}}" src="{{item.url}}" alt="" />
+        <view class="delImage" catchtap="delImage" data-idnex="{{index}}">-</view>
+    </view>
+    <view class="imageItem addImage" bindtap="chooseImage" data-type="pictures"></view>
+</view>
+<button class="fabu-button" type="primary" bindtap="finish">提交</button>

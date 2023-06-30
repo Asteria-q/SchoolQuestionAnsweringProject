@@ -1,0 +1,12 @@
+@import "/template/qTemplate.wxss";
+@import "/template/hot.wxss";
+page{
+    background-color: #E6F1FF;
+}
+.page {
+    height: auto;
+    font-size: medium;
+    color: black;
+    padding-top: 1px; 
+    padding-bottom: 10px;
+}

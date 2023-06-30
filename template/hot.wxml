@@ -1,0 +1,16 @@
+<!-- wxml代码 -->
+<template name="hot-show">
+    <view class="hot">
+        <view class="list">
+            <view class="list-item" wx:for="{{questions}}" wx:key="index">
+                <view class="item-number">{{index + 1}}</view>
+                <view class="item-content">
+                    <view class="item-title" bindtap="clickQue" data-index="{{index}}">
+                        {{item.Title}}
+                    </view>
+                    <view class="item-desc">{{item.QueContent}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

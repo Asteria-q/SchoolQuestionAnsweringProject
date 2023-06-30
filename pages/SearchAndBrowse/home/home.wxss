@@ -1,0 +1,30 @@
+@import "/template/qTemplate.wxss";
+@import "/template/hot.wxss";
+page{
+    background-color: #E6F1FF;
+}
+.page {
+    height: auto;
+    /* background-color: burlywood; */
+    font-size: medium;
+    color: black;
+    /* padding-top: 1px; */
+    /* padding-bottom: 55px; */
+    
+    padding: 10rpx 0 70rpx 0;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+.top-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20rpx;
+    align-self: center;
+    /* background-color: darkgrey; */
+}

@@ -1,0 +1,38 @@
+<import src="/template/qTemplate.wxml"></import>
+<import src="/template/hot.wxml"></import>
+<van-overlay show="{{show}}" bind:click="onClickHide"></van-overlay>
+<block wx:if="{{!show}}">
+    <view class="top">
+        <image class="top-avatar" src="/images/buaa.png" mode="aspectFill" />
+        <van-search style="width: 320px;" value="{{keyWord}}" placeholder="请输入搜索关键词" shape="round" bind:change="onChange" bind:click-input="onClickShow" bind:search="onClickSearch"></van-search>
+    </view>
+    <van-sticky>
+        <van-tabs active="{{active}}" bind:change="onChangeTab" swipeable animated>
+            <block wx:for="{{showTabs}}" wx:key="index">
+                <van-tab title="{{item}}"></van-tab>
+            </block>
+        </van-tabs>
+    </van-sticky>
+    <block wx:if="{{questionList.length != 0}}">
+        <block wx:if="{{active == 0}}">
+            <template is="hot-show" data="{{questions: questionList}}"></template>
+        </block>
+        <block wx:else>
+            <view class="page">
+                <block wx:for="{{questionList}}" wx:key="index">
+                    <template is="question-show" data="{{question: item, index: index, liked: liked}}"></template>
+                </block>
+            </view>
+        </block>
+    </block>
+    <block wx:else>
+        <van-empty image="search" description="没有相关类别问题"></van-empty>
+    </block>
+</block>
+<block wx:else>
+    <van-sticky>
+        <van-search value="{{keyWord}}" placeholder="请输入搜索关键词" shape="round" use-action-slot="{{show}}" bind:change="onChange" bind:click-input="onClickShow" bind:search="onClickSearch" focus="{{true}}">
+            <view slot="action" bind:tap="onClickSearch">确定</view>
+        </van-search>
+    </van-sticky>
+</block>
