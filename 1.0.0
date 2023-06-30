@@ -1,0 +1,8 @@
+Defaulting to user installation because normal site-packages is not writeable
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Requirement already satisfied: django-jet in c:\users\asteria\appdata\roaming\python\python38\site-packages (1.0.8)
+Requirement already satisfied: Django in c:\users\asteria\appdata\roaming\python\python38\site-packages (from django-jet) (4.2)
+Requirement already satisfied: asgiref<4,>=3.6.0 in c:\users\asteria\appdata\roaming\python\python38\site-packages (from Django->django-jet) (3.6.0)
+Requirement already satisfied: tzdata in c:\users\asteria\appdata\roaming\python\python38\site-packages (from Django->django-jet) (2023.3)
+Requirement already satisfied: sqlparse>=0.3.1 in c:\users\asteria\appdata\roaming\python\python38\site-packages (from Django->django-jet) (0.4.3)
+Requirement already satisfied: backports.zoneinfo in c:\users\asteria\appdata\roaming\python\python38\site-packages (from Django->django-jet) (0.2.1)
