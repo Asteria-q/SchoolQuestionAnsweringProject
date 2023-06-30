@@ -1,1 +1,3 @@
 # SchoolQuestionAnsweringProject
+
+BUAA 软工大作业，实现了一个拥有微信小程序端与Web管理员端的校园问答系统
