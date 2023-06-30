@@ -1,0 +1,3 @@
+# SchoolQuestionAnsweringProject
+
+这一部分是校园问答系统的微信小程序端，使用微信开发者工具进行开发
